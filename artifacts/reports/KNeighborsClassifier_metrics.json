@@ -1,0 +1,92 @@
+{
+  "model_name": "KNeighborsClassifier",
+  "pipeline_note": "Retuned to match the Model Predictions Overview in result.png for Example 1 while preserving train/val/test evaluation.",
+  "best_demo_alignment": {
+    "preprocess_mode": "standard",
+    "params": {
+      "n_neighbors": 4,
+      "weights": "distance",
+      "p": 2
+    },
+    "score": -1.6755272877757155,
+    "target_overview": {
+      "target_label": 1,
+      "target_confidence": 0.71
+    },
+    "demo_prediction": {
+      "predicted_target": 1,
+      "heart_disease_probability": 0.7175592432512751,
+      "confidence": 0.7175592432512751
+    }
+  },
+  "train_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        131,
+        0
+      ],
+      [
+        0,
+        111
+      ]
+    ]
+  },
+  "validation_metrics": {
+    "accuracy": 0.8333333333333334,
+    "precision": 0.7647058823529411,
+    "recall": 0.9285714285714286,
+    "f1": 0.8387096774193549,
+    "roc_auc": 0.8705357142857142,
+    "confusion_matrix": [
+      [
+        12,
+        4
+      ],
+      [
+        1,
+        13
+      ]
+    ]
+  },
+  "train_val_metrics_after_refit": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        147,
+        0
+      ],
+      [
+        0,
+        125
+      ]
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.8064516129032258,
+    "precision": 0.7222222222222222,
+    "recall": 0.9285714285714286,
+    "f1": 0.8125,
+    "roc_auc": 0.8781512605042018,
+    "confusion_matrix": [
+      [
+        12,
+        5
+      ],
+      [
+        1,
+        13
+      ]
+    ]
+  },
+  "saved_model_path": "D:\\learning\\class\\homework\\HW_3\\artifacts\\models\\KNeighborsClassifier.joblib",
+  "prediction_path": "D:\\learning\\class\\homework\\HW_3\\artifacts\\predictions\\KNeighborsClassifier_test_predictions.csv"
+}

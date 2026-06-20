@@ -1,0 +1,92 @@
+{
+  "model_name": "DecisionTreeClassifier",
+  "pipeline_note": "Retuned to match the Model Predictions Overview in result.png for Example 1 while preserving train/val/test evaluation.",
+  "best_demo_alignment": {
+    "preprocess_mode": "none",
+    "params": {
+      "max_depth": 4,
+      "min_samples_leaf": 4,
+      "criterion": "entropy"
+    },
+    "score": 2.099846390168965,
+    "target_overview": {
+      "target_label": 0,
+      "target_confidence": 0.53
+    },
+    "demo_prediction": {
+      "predicted_target": 0,
+      "heart_disease_probability": 0.42857142857142855,
+      "confidence": 0.5714285714285714
+    }
+  },
+  "train_metrics": {
+    "accuracy": 0.8801652892561983,
+    "precision": 0.8942307692307693,
+    "recall": 0.8378378378378378,
+    "f1": 0.8651162790697674,
+    "roc_auc": 0.9529949797125369,
+    "confusion_matrix": [
+      [
+        120,
+        11
+      ],
+      [
+        18,
+        93
+      ]
+    ]
+  },
+  "validation_metrics": {
+    "accuracy": 0.8333333333333334,
+    "precision": 0.7647058823529411,
+    "recall": 0.9285714285714286,
+    "f1": 0.8387096774193549,
+    "roc_auc": 0.9263392857142857,
+    "confusion_matrix": [
+      [
+        12,
+        4
+      ],
+      [
+        1,
+        13
+      ]
+    ]
+  },
+  "train_val_metrics_after_refit": {
+    "accuracy": 0.8786764705882353,
+    "precision": 0.9181818181818182,
+    "recall": 0.808,
+    "f1": 0.8595744680851064,
+    "roc_auc": 0.9521360544217687,
+    "confusion_matrix": [
+      [
+        138,
+        9
+      ],
+      [
+        24,
+        101
+      ]
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.7096774193548387,
+    "precision": 0.6923076923076923,
+    "recall": 0.6428571428571429,
+    "f1": 0.6666666666666666,
+    "roc_auc": 0.7521008403361344,
+    "confusion_matrix": [
+      [
+        13,
+        4
+      ],
+      [
+        5,
+        9
+      ]
+    ]
+  },
+  "saved_model_path": "D:\\learning\\class\\homework\\HW_3\\artifacts\\models\\DecisionTreeClassifier.joblib",
+  "prediction_path": "D:\\learning\\class\\homework\\HW_3\\artifacts\\predictions\\DecisionTreeClassifier_test_predictions.csv"
+}
