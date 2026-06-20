@@ -1,50 +1,73 @@
 {
   "model_name": "VotingClassifier",
-  "pipeline_note": "Soft voting ensemble rebuilt from the result.png-aligned base pipelines.",
-  "best_demo_alignment": {
-    "weights": [
-      1,
-      1,
-      1,
-      1,
-      2,
-      2,
-      1
-    ],
-    "score": -2.4269712593638593,
-    "target_overview": {
-      "target_label": 0,
-      "target_confidence": 0.7
+  "base_configs": {
+    "dt": {
+      "max_depth": 4,
+      "min_samples_split": 2,
+      "min_samples_leaf": 4
     },
-    "demo_prediction": {
-      "predicted_target": 0,
-      "heart_disease_probability": 0.2993308916815141,
-      "confidence": 0.700669108318486
+    "knn": {
+      "n_neighbors": 4,
+      "weights": "distance",
+      "p": 2
+    },
+    "nb": {
+      "var_smoothing": 1e-12
+    },
+    "rf": {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "min_samples_split": 6,
+      "min_samples_leaf": 2
+    },
+    "ada": {
+      "n_estimators": 150,
+      "learning_rate": 0.3
+    },
+    "gb": {
+      "n_estimators": 50,
+      "learning_rate": 0.2,
+      "max_depth": 2,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1
+    },
+    "xgb": {
+      "n_estimators": 80,
+      "max_depth": 2,
+      "learning_rate": 0.05
     }
   },
+  "best_validation_weights": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1
+  ],
   "train_metrics": {
-    "accuracy": 0.9462809917355371,
-    "precision": 0.9622641509433962,
-    "recall": 0.918918918918919,
-    "f1": 0.9400921658986175,
-    "roc_auc": 0.9907846778075786,
+    "accuracy": 0.9545454545454546,
+    "precision": 0.9716981132075472,
+    "recall": 0.9279279279279279,
+    "f1": 0.9493087557603687,
     "confusion_matrix": [
       [
-        127,
-        4
+        128,
+        3
       ],
       [
-        9,
-        102
+        8,
+        103
       ]
-    ]
+    ],
+    "roc_auc": 0.9913348462966783
   },
   "validation_metrics": {
     "accuracy": 0.9333333333333333,
     "precision": 0.875,
     "recall": 1.0,
     "f1": 0.9333333333333333,
-    "roc_auc": 0.9955357142857143,
     "confusion_matrix": [
       [
         14,
@@ -54,42 +77,43 @@
         0,
         14
       ]
-    ]
+    ],
+    "roc_auc": 0.9910714285714286
   },
   "train_val_metrics_after_refit": {
-    "accuracy": 0.9411764705882353,
-    "precision": 0.957983193277311,
-    "recall": 0.912,
-    "f1": 0.9344262295081968,
-    "roc_auc": 0.9893333333333333,
+    "accuracy": 0.9485294117647058,
+    "precision": 0.9663865546218487,
+    "recall": 0.92,
+    "f1": 0.9426229508196722,
     "confusion_matrix": [
       [
-        142,
-        5
+        143,
+        4
       ],
       [
-        11,
-        114
+        10,
+        115
       ]
-    ]
+    ],
+    "roc_auc": 0.9898775510204081
   },
   "test_metrics": {
-    "accuracy": 0.8387096774193549,
-    "precision": 0.8,
+    "accuracy": 0.8709677419354839,
+    "precision": 0.8571428571428571,
     "recall": 0.8571428571428571,
-    "f1": 0.8275862068965517,
-    "roc_auc": 0.9117647058823528,
+    "f1": 0.8571428571428571,
     "confusion_matrix": [
       [
-        14,
-        3
+        15,
+        2
       ],
       [
         2,
         12
       ]
-    ]
+    ],
+    "roc_auc": 0.9117647058823529
   },
-  "saved_model_path": "D:\\learning\\class\\homework\\HW_3\\artifacts\\models\\VotingClassifier.joblib",
-  "prediction_path": "D:\\learning\\class\\homework\\HW_3\\artifacts\\predictions\\VotingClassifier_test_predictions.csv"
+  "saved_model_path": "artifacts/models/VotingClassifier.joblib",
+  "prediction_path": "artifacts/predictions/VotingClassifier_test_predictions.csv"
 }
